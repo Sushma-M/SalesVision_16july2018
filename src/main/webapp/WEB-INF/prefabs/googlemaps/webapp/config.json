@@ -1,0 +1,235 @@
+{
+  "displayName" : "Googlemaps",
+  "group" : "location",
+  "templateUrl" : "/pages/Main/Main.html",
+  "controllerUrl" : "/pages/Main/Main.js",
+  "variablesUrl" : "/pages/Main/Main.variables.json",
+  "iconUrl" : "/resources/images/imagelists/prefab-icon.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ "https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places,visualization,drawing,geometry" ],
+    "modules" : [ {
+      "name" : "ngMap",
+      "files" : [ "/resources/js/ng-map.min.js" ]
+    } ]
+  },
+  "properties" : {
+    "maptype" : {
+      "type" : "list",
+      "displayName" : "Map Type",
+      "helpText" : "This property allows you to set the map type.",
+      "value" : "Markers",
+      "options" : [ "Markers", "Route", "Heatmap" ],
+      "show" : true,
+      "disabled" : false
+    },
+    "viewtype" : {
+      "type" : "list",
+      "displayName" : "View Type",
+      "helpText" : "This property allows you to set the view type of the map.",
+      "value" : "TERRAIN",
+      "options" : [ "TERRAIN", "SATELLITE", "ROADMAP", "HYBRID" ],
+      "show" : true,
+      "disabled" : false
+    },
+    "locations" : {
+      "type" : "array,object",
+      "helpText" : "Set this property to a variable to populate the list of values to display.",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : false,
+      "disabled" : false
+    },
+    "markertype" : {
+      "type" : "list",
+      "displayName" : "Location Type",
+      "helpText" : "Set this property to change the format of the location being plotted.",
+      "value" : "LatLng",
+      "options" : [ "Address", "LatLng" ],
+      "show" : false,
+      "disabled" : false
+    },
+    "address" : {
+      "type" : "string",
+      "options" : [ ],
+      "widget" : "list-picker",
+      "show" : false,
+      "disabled" : false
+    },
+    "lat" : {
+      "type" : "list",
+      "displayName" : "Marker Latitude",
+      "helpText" : "This property can be used to set the Latitude of the location.",
+      "show" : false,
+      "disabled" : false
+    },
+    "lng" : {
+      "type" : "list",
+      "displayName" : "Marker Longitude",
+      "helpText" : "This property can be used to set the Longitude of the location.",
+      "show" : false,
+      "disabled" : false
+    },
+    "gradient" : {
+      "type" : "array",
+      "helpText" : "Set this property to a variable to set the color of gradient displayed for Heatmap.",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : false,
+      "disabled" : false
+    },
+    "pixeldensity" : {
+      "type" : "number",
+      "displayName" : "Pixel Density",
+      "helpText" : "This property can be used to set the size of the marker.",
+      "value" : 10,
+      "show" : false,
+      "disabled" : false
+    },
+    "opacity" : {
+      "type" : "number",
+      "helpText" : "This property can be used to set the appearance of the marker.",
+      "value" : 0.8,
+      "show" : false,
+      "disabled" : false
+    },
+    "info" : {
+      "type" : "list",
+      "displayName" : "Marker Info",
+      "helpText" : "This property is used to set any information that needs to be displayed when the location is clicked.",
+      "show" : false,
+      "disabled" : false
+    },
+    "icon" : {
+      "type" : "list",
+      "displayName" : "Marker Icon",
+      "helpText" : "This property is used to set the icon to be displayed on the location.",
+      "show" : false,
+      "disabled" : false
+    },
+    "shade" : {
+      "type" : "list",
+      "displayName" : "Perimeter Color",
+      "helpText" : "This property is used to set a circle shaped boundary around the marker.",
+      "show" : false,
+      "disabled" : false
+    },
+    "radius" : {
+      "type" : "list",
+      "displayName" : "Perimeter Radius",
+      "helpText" : "This property is used to set the radius of the boundary around the marker.",
+      "show" : false,
+      "disabled" : false
+    },
+    "origin" : {
+      "type" : "string",
+      "helpText" : "This property is used to set the start point of the route to be displayed.",
+      "bindable" : "in-out-bound",
+      "show" : false,
+      "disabled" : false
+    },
+    "destination" : {
+      "type" : "string",
+      "helpText" : "This property is used to set the end point of the route to be displayed.",
+      "bindable" : "in-out-bound",
+      "show" : false,
+      "disabled" : false
+    },
+    "waypoints" : {
+      "type" : "array,object",
+      "displayName" : "Way Points",
+      "helpText" : "This property is used to the mark the locations in between the route",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : false,
+      "disabled" : false
+    },
+    "stopover" : {
+      "type" : "boolean",
+      "helpText" : "This property is used to enable markers on the waypoints in the route",
+      "value" : false,
+      "show" : false,
+      "disabled" : false
+    },
+    "travelmode" : {
+      "type" : "list",
+      "displayName" : "Travel Mode",
+      "helpText" : "This property is used to set the mode of travel used for plotting the route",
+      "value" : "Driving",
+      "options" : [ "Walking", "Driving", "Transit", "Bicycling" ],
+      "show" : false,
+      "disabled" : false
+    },
+    "height" : {
+      "type" : "string",
+      "value" : "400px",
+      "show" : true,
+      "disabled" : false
+    },
+    "zoom" : {
+      "type" : "list",
+      "helpText" : "This property is used to set the zoom level of the map",
+      "value" : 5,
+      "options" : [ ],
+      "show" : true,
+      "disabled" : false
+    },
+    "trafficlayer" : {
+      "type" : "boolean",
+      "displayName" : "Traffic Layer",
+      "helpText" : "This property is used to enable real-time traffic information (where supported) to your maps",
+      "value" : false,
+      "show" : false,
+      "disabled" : false
+    },
+    "transitlayer" : {
+      "type" : "boolean",
+      "displayName" : "Transit Layer",
+      "helpText" : "This property is used to enable real-time local transit information (where supported) to your maps",
+      "value" : false,
+      "show" : false,
+      "disabled" : false
+    },
+    "onClick" : {
+      "type" : "event",
+      "helpText" : "This event handler is called upon the click of map.",
+      "widget" : "eventlist",
+      "show" : true,
+      "disabled" : false
+    },
+    "refresh" : {
+      "type" : "method",
+      "method" : "refresh"
+    },
+    "clearMarkers" : {
+      "type" : "method",
+      "method" : "clearMarkers"
+    },
+    "distance" : {
+      "type" : "string",
+      "bindable" : "out-bound",
+      "show" : false,
+      "disabled" : false
+    },
+    "duration" : {
+      "type" : "string",
+      "bindable" : "out-bound",
+      "show" : false,
+      "disabled" : false
+    },
+    "onMarkerclick" : {
+      "type" : "event",
+      "helpText" : "This event handler is called when the marker is clicked.",
+      "widget" : "eventlist",
+      "show" : true,
+      "disabled" : false
+    },
+    "onMarkerhover" : {
+      "type" : "event",
+      "helpText" : "This event handler is called when the marker is hovered.",
+      "widget" : "eventlist",
+      "show" : true,
+      "disabled" : false
+    }
+  }
+}
