@@ -167,7 +167,6 @@ public class Reps implements Serializable {
 
         this.channels = channels;
     }
-
     @JsonInclude(Include.NON_EMPTY)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "reps")
     @Cascade({CascadeType.SAVE_UPDATE, CascadeType.REMOVE})
@@ -193,10 +192,10 @@ public class Reps implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(taskses != null) {
-            taskses.forEach(tasks -> tasks.setReps(this));
+            taskses.forEach(_tasks -> _tasks.setReps(this));
         }
         if(quoteses != null) {
-            quoteses.forEach(quotes -> quotes.setReps(this));
+            quoteses.forEach(_quotes -> _quotes.setReps(this));
         }
     }
 
@@ -213,4 +212,3 @@ public class Reps implements Serializable {
         return Objects.hash(getId());
     }
 }
-

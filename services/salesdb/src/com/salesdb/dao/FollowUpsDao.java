@@ -33,4 +33,3 @@ public class FollowUpsDao extends WMGenericDaoImpl<FollowUps, Integer> {
         return this.template;
     }
 }
-

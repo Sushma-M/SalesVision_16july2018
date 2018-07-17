@@ -33,4 +33,3 @@ public class ChannelsDao extends WMGenericDaoImpl<Channels, Integer> {
         return this.template;
     }
 }
-

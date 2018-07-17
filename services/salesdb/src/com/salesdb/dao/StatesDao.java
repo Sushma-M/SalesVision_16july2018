@@ -33,4 +33,3 @@ public class StatesDao extends WMGenericDaoImpl<States, Integer> {
         return this.template;
     }
 }
-

@@ -33,4 +33,3 @@ public class LeadsDao extends WMGenericDaoImpl<Leads, Integer> {
         return this.template;
     }
 }
-

@@ -33,4 +33,3 @@ public class RepsDao extends WMGenericDaoImpl<Reps, Integer> {
         return this.template;
     }
 }
-

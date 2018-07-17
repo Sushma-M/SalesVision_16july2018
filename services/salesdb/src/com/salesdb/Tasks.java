@@ -112,4 +112,3 @@ public class Tasks implements Serializable {
         return Objects.hash(getId());
     }
 }
-

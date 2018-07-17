@@ -33,4 +33,3 @@ public class TasksDao extends WMGenericDaoImpl<Tasks, Integer> {
         return this.template;
     }
 }
-

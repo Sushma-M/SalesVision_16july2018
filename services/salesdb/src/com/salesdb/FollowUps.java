@@ -92,4 +92,3 @@ public class FollowUps implements Serializable {
         return Objects.hash(getId());
     }
 }
-

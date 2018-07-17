@@ -229,6 +229,7 @@
       "sourceTable" : "SALES",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "PRODUCTS",
+      "valid" : true,
       "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
@@ -260,6 +261,7 @@
       "sourceTable" : "SALES",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "QUOTES",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -718,6 +720,7 @@
       "sourceTable" : "REPS",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "CHANNELS",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -861,6 +864,7 @@
       "sourceTable" : "FOLLOW_UPS",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "QUOTES",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -1062,6 +1066,7 @@
       "sourceTable" : "TASKS",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "REPS",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -1317,6 +1322,7 @@
       "sourceTable" : "LEADS",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "CUSTOMERS",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -1543,6 +1549,7 @@
       "sourceTable" : "CUSTOMERS",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "STATES",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",
@@ -1744,6 +1751,7 @@
       "sourceTable" : "QUOTES",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "LEADS",
+      "valid" : true,
       "virtual" : false
     }, {
       "cardinality" : "ManyToOne",
@@ -1775,6 +1783,7 @@
       "sourceTable" : "QUOTES",
       "targetColumnsUniqueKey" : false,
       "targetTable" : "REPS",
+      "valid" : true,
       "virtual" : false
     } ],
     "schema" : "PUBLIC",

@@ -2,13 +2,14 @@ var _WM_APP_PROPERTIES = {
   "activeTheme" : "default",
   "dateFormat" : "",
   "defaultLanguage" : "en",
-  "displayName" : "Googlemaps",
+  "displayName" : "googlemaps",
   "homePage" : "Main",
-  "name" : "Googlemaps",
+  "name" : "googlemaps",
   "platformType" : "DEFAULT",
   "securityEnabled" : "false",
   "supportedLanguages" : "en",
   "timeFormat" : "",
   "type" : "PREFAB",
-  "version" : "5.6"
+  "version" : "5.9",
+  "xsrf_header_name" : "X-WM-XSRF-TOKEN"
 };

@@ -87,7 +87,6 @@ public class Leads implements Serializable {
 
         this.customers = customers;
     }
-
     @JsonInclude(Include.NON_EMPTY)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "leads")
     @Cascade({CascadeType.SAVE_UPDATE, CascadeType.REMOVE})
@@ -102,7 +101,7 @@ public class Leads implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(quoteses != null) {
-            quoteses.forEach(quotes -> quotes.setLeads(this));
+            quoteses.forEach(_quotes -> _quotes.setLeads(this));
         }
     }
 
@@ -119,4 +118,3 @@ public class Leads implements Serializable {
         return Objects.hash(getId());
     }
 }
-

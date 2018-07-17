@@ -80,7 +80,7 @@ public class States implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(customerses != null) {
-            customerses.forEach(customers -> customers.setStates(this));
+            customerses.forEach(_customers -> _customers.setStates(this));
         }
     }
 
@@ -97,4 +97,3 @@ public class States implements Serializable {
         return Objects.hash(getId());
     }
 }
-

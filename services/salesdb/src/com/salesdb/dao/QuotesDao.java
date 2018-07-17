@@ -33,4 +33,3 @@ public class QuotesDao extends WMGenericDaoImpl<Quotes, Integer> {
         return this.template;
     }
 }
-

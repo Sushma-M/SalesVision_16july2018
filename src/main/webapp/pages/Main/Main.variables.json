@@ -245,11 +245,11 @@
       "package" : "com.salesdb.Sales"
     } ],
     "filterFields" : { },
-    "package" : "com.salesdb.Sales",
     "filterExpressions" : {
       "condition" : "AND",
       "rules" : [ ]
-    }
+    },
+    "package" : "com.salesdb.Sales"
   },
   "TotalLeads" : {
     "_id" : "wm-TotalLeads-wm.ServiceVariable-1499075343835",

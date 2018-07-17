@@ -53,9 +53,9 @@
   "dataSourceType" : "WM_MANAGED_DATASOURCE",
   "jndiName" : "",
   "reloadInfo" : {
-    "reload" : true,
-    "reason" : "MIGRATION_FAILED",
-    "message" : "Source re-generation required to fix HSQL default schema name"
+    "reload" : false,
+    "reason" : null,
+    "message" : null
   },
   "readOnly" : true
 }

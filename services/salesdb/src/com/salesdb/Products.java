@@ -70,7 +70,7 @@ public class Products implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(saleses != null) {
-            saleses.forEach(sales -> sales.setProducts(this));
+            saleses.forEach(_sales -> _sales.setProducts(this));
         }
     }
 
@@ -87,4 +87,3 @@ public class Products implements Serializable {
         return Objects.hash(getId());
     }
 }
-

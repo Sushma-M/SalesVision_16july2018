@@ -138,4 +138,3 @@ public class Sales implements Serializable {
         return Objects.hash(getId());
     }
 }
-

@@ -70,7 +70,7 @@ public class Channels implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(repses != null) {
-            repses.forEach(reps -> reps.setChannels(this));
+            repses.forEach(_reps -> _reps.setChannels(this));
         }
     }
 
@@ -87,4 +87,3 @@ public class Channels implements Serializable {
         return Objects.hash(getId());
     }
 }
-

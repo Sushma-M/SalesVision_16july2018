@@ -86,7 +86,6 @@ public class Customers implements Serializable {
 
         this.states = states;
     }
-
     @JsonInclude(Include.NON_EMPTY)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "customers")
     @Cascade({CascadeType.SAVE_UPDATE, CascadeType.REMOVE})
@@ -101,7 +100,7 @@ public class Customers implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(leadses != null) {
-            leadses.forEach(leads -> leads.setCustomers(this));
+            leadses.forEach(_leads -> _leads.setCustomers(this));
         }
     }
 
@@ -118,4 +117,3 @@ public class Customers implements Serializable {
         return Objects.hash(getId());
     }
 }
-

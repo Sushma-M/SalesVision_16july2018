@@ -33,4 +33,3 @@ public class CustomersDao extends WMGenericDaoImpl<Customers, Integer> {
         return this.template;
     }
 }
-

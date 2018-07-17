@@ -124,7 +124,6 @@ public class Quotes implements Serializable {
 
         this.reps = reps;
     }
-
     @JsonInclude(Include.NON_EMPTY)
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "quotes")
     @Cascade({CascadeType.SAVE_UPDATE, CascadeType.REMOVE})
@@ -150,10 +149,10 @@ public class Quotes implements Serializable {
     @PostPersist
     public void onPostPersist() {
         if(saleses != null) {
-            saleses.forEach(sales -> sales.setQuotes(this));
+            saleses.forEach(_sales -> _sales.setQuotes(this));
         }
         if(followUpses != null) {
-            followUpses.forEach(followUps -> followUps.setQuotes(this));
+            followUpses.forEach(_followUps -> _followUps.setQuotes(this));
         }
     }
 
@@ -170,4 +169,3 @@ public class Quotes implements Serializable {
         return Objects.hash(getId());
     }
 }
-
