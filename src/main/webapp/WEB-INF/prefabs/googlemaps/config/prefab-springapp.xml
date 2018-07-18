@@ -5,7 +5,7 @@
     <import resource="classpath:prefab-dispatcher-servlet.xml"/>
     <import resource="classpath:prefab-services.xml"/>
 
-    
+
     <bean class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer" id="prefabPropertiesPlaceHolderConfigurer">
         <property name="ignoreResourceNotFound" value="true"/>
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
